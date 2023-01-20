@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Assignment
 
-## Getting Started
+**Thank you for taking the time to work on our Frontend assignment!** This document will explain the assignment and tell you more about the tech stack and requirements. Try to spend at most 6 hours on it and don't worry if you can't complete the assignment within that time. What matters most is not if you fully complete the assignment, but the decisions you make along the way and why. That is what we will be mostly interested in.
 
-First, run the development server:
+Think upfront about what you think is important, so you can focus on that.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Context
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Within Cryptohopper we have multiple tech stacks. The backend is mainly PHP and Go, while the frontend is mostly React (sometimes in combination with NextJS). As a Frontender at Cryptohopper you will be working with NextJS when server side rendering is required and sometimes React when server side rendering is not required. On the platform, the tech stack is mainly PHP, HTML, CSS and vanilla JavaScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## For this assignment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+We've set up a new (pristine) [NextJS](https://nextjs.org/) + [TypeScript](https://nextjs.org/docs/basic-features/typescript) project with `create-next-app`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### What we would like you to build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Using NextJS, build a page that lists crypto currencies like [this one](https://www.cryptohopper.com/website-widgets?widget=marketcap) (see [screenshot](./public//screenshot.png)). You can use this public [coingecko API](https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false) and the accompanying [documentation](https://www.coingecko.com/en/api/documentation) (check documentation for the `/coins/markets` endpoint).
 
-## Learn More
+_Feel free to style it differently than the example screenshot and add your own creativity._
 
-To learn more about Next.js, take a look at the following resources:
+### Requirements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The page should be SEO friendly eg. server side rendered
+- It should list the `icon`, `name`, `ticker`, `price`, `marketcap` and `24h volume` per coin
+- It should be sortable on every column, except for the icon
+- It should have pagination (50 item batch) that does not require to reload the page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Extra** (optional)
 
-## Deploy on Vercel
+- Add a unit test if there is a unit you can test
+- Add an end to end test with cypress
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Workflow**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Clone or Fork this git repository with your preferred software development platform
+- Commit your changes frequently
+- Once you're done, send us a link to your repository
+
+### Tech stack
+
+- React
+- TypeScript
+- NextJS
+- Jest (optional)
+- Cypress (optional)
+
+**Good luck!** 🍀
